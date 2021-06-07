@@ -1,0 +1,6 @@
+{
+  "name": "RSS Telegram',
+  "description": "Buat post di Telegram dari RSS",
+  "repository": "https://github.com/mvplteam/phprss2telegram",
+  "keywords": ["rss", "telegram", "bot"]
+}
