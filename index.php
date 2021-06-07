@@ -99,7 +99,7 @@ while (true) {
 					'inline_keyboard' => array(
 						array(
 							array(
-								'text' => '🌐 Visit ',
+								'text' => 'Original Page ',
 								'url'  => urlencode($item->link),
 							)
 						)
