@@ -11,7 +11,7 @@
 *
 */
 /* Token API Telegram. Dari @BotFather */
-$token = '1807553431:AAHJ7Vm9CY5HWyW7nScruEBk3_LxbePHNlI';
+$token = '1323403280:AAGUapqBzinJyJzZqfPtsI0DfwUnd0XiFn0';
 
 /* Isi Dengan Grup ID */
 $chat = '-1001356437687';
