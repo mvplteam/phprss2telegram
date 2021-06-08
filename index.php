@@ -11,12 +11,12 @@
 *
 */
 /* Token API Telegram. Dari @BotFather */
-$token = '1323403280:AAGUapqBzinJyJzZqfPtsI0DfwUnd0XiFn0';
+$token = '1807553431:AAHJ7Vm9CY5HWyW7nScruEBk3_LxbePHNlI';
 
 /* Isi Dengan Grup ID */
 $chat = '-1001356437687';
 /* Sumber RSS Feed */
-$rss = 'https://yts.mx/rss';
+$rss = 'https://www.torlock.com/movies/rss.xml';
 
 /* Log Disimpan */
 $log_file = 'bot-rss.log';
@@ -99,7 +99,7 @@ while (true) {
 					'inline_keyboard' => array(
 						array(
 							array(
-								'text' => 'Original Page ',
+								'text' => '🌐 Kunjungi Situs Utama ',
 								'url'  => urlencode($item->link),
 							)
 						)
