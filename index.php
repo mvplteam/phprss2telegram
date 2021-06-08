@@ -14,7 +14,7 @@
 $token = '1807553431:AAHJ7Vm9CY5HWyW7nScruEBk3_LxbePHNlI';
 
 /* Isi Dengan Grup ID */
-$chat = '-1001356437687';
+$chat = '-1001345626857';
 /* Sumber RSS Feed */
 $rss = 'https://www.torlock.com/movies/rss.xml';
 
