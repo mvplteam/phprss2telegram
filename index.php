@@ -14,7 +14,7 @@
 $token = '1807553431:AAHJ7Vm9CY5HWyW7nScruEBk3_LxbePHNlI';
 
 /* Isi Dengan Grup ID */
-$chat = '-1001345626857';
+$chat = '-1001356437687';
 /* Sumber RSS Feed */
 $rss = 'https://www.torlock.com/movies/rss.xml';
 
@@ -94,7 +94,7 @@ while (true) {
 			/* Memeriksa Berita */
 			/* Jika ada Berita, Sampaikan.. */
 			if ($timestamp_article > $last_send and $last_send_title != $item->guid) {
-				$message = "/mirror " . $item->enclosure['url'] . PHP_EOL;
+				$message = "/mirror@kolakabot" . $item->enclosure['url'] . PHP_EOL;
 				$reply_markup = json_encode(array(
 					'inline_keyboard' => array(
 						array(
