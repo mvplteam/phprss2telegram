@@ -11,10 +11,10 @@
 *
 */
 /* Token API Telegram. Dari @BotFather */
-$token = '1323403280:AAGUapqBzinJyJzZqfPtsI0DfwUnd0XiFn0';
+$token = '1862253813:AAFQwTBwh6OhnRT0oh6T6NjEb5KCsVSnvrU';
 
 /* Isi Dengan Grup ID */
-$chat = '-1001356437687';
+$chat = '-1001535153466';
 /* Sumber RSS Feed */
 $rss = 'https://yts.mx/rss';
 
