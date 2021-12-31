@@ -94,7 +94,7 @@ while (true) {
 			/* Memeriksa Berita */
 			/* Jika ada Berita, Sampaikan.. */
 			if ($timestamp_article > $last_send and $last_send_title != $item->guid) {
-				$message = "/mirror@yts2gdbot " . $item->enclosure['url'] . PHP_EOL;
+				$message = "/mirror " . $item->enclosure['url'] . PHP_EOL;
 				$reply_markup = json_encode(array(
 					'inline_keyboard' => array(
 						array(
