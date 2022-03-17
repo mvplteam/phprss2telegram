@@ -11,12 +11,12 @@
 *
 */
 /* Token API Telegram. Dari @BotFather */
-$token = '1862253813:AAFQwTBwh6OhnRT0oh6T6NjEb5KCsVSnvrU';
+$token = '1002130662:AAF6XeBP4VGCXQKLYTfnLbk0T091mH8Vth0';
 
 /* Isi Dengan Grup ID */
-$chat = '-1001535153466';
+$chat = '-1001707879448';
 /* Sumber RSS Feed */
-$rss = 'https://yts.mx/rss';
+$rss = 'https://www.torlock.com/movies/rss.xml';
 
 /* Log Disimpan */
 $log_file = 'bot-rss.log';
