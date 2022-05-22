@@ -16,7 +16,7 @@ $token = '1019756652:AAHia0tIAZoj_0UhuU3s0e7oTBrg4bK9KII';
 /* Isi Dengan Grup ID */
 $chat = '-1001503987267';
 /* Sumber RSS Feed */
-$rss = 'https://www.torlock.com/fresh/rss.xml';
+$rss = 'https://eztv.re/ezrss.xml';
 
 /* Log Disimpan */
 $log_file = 'bot-rss.log';
