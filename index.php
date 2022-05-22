@@ -11,12 +11,12 @@
 *
 */
 /* Token API Telegram. Dari @BotFather */
-$token = '1002130662:AAF6XeBP4VGCXQKLYTfnLbk0T091mH8Vth0';
+$token = '1019756652:AAHia0tIAZoj_0UhuU3s0e7oTBrg4bK9KII';
 
 /* Isi Dengan Grup ID */
-$chat = '-1001707879448';
+$chat = '-1001503987267';
 /* Sumber RSS Feed */
-$rss = 'https://www.torlock.com/movies/rss.xml';
+$rss = 'https://www.torlock.com/fresh/rss.xml';
 
 /* Log Disimpan */
 $log_file = 'bot-rss.log';
@@ -94,12 +94,12 @@ while (true) {
 			/* Memeriksa Berita */
 			/* Jika ada Berita, Sampaikan.. */
 			if ($timestamp_article > $last_send and $last_send_title != $item->guid) {
-				$message = "/mirror " . $item->enclosure['url'] . PHP_EOL;
+				$message = ". $item->title . "=>>" . $item->enclosure['url'] . PHP_EOL;
 				$reply_markup = json_encode(array(
 					'inline_keyboard' => array(
 						array(
 							array(
-								'text' => '🌐 Kunjungi Situs Utama ',
+								'text' => '🌐 Visit Site ',
 								'url'  => urlencode($item->link),
 							)
 						)
