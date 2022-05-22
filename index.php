@@ -76,41 +76,41 @@ while (true) {
 	$current_time = time();
 	$articles = @simplexml_load_file($rss);
 	/* Lihat Log jika ada pesan error */
-	if ($articles === false) {
+	if ($articles === false) { 
 		$time = date("m-d-y H:i", $current_time);
-		$log_text = "[$time] Bot gagal menerima informasi $rss." . PHP_EOL;
+		$log_text = "[$time] Bot gagal menerima informasi $rss.".PHP_EOL;
 		file_put_contents($log_file, $log_text, FILE_APPEND | LOCK_EX);
-		/* Bot Membaca Berita Disampaikan */
-	} else {
+	/* Bot Membaca Berita Disampaikan */	
+	}else{
 		/* Menerima berita RSS */
 		$xmlArray = array();
 		foreach ($articles->channel->item as $item) $xmlArray[] = $item;
 		$xmlArray = array_reverse($xmlArray);
-
+		
 		/* Mulai putaran berita */
 		foreach ($xmlArray as $item) {
-			$time = date("m-d-y H:i", $current_time);
 			$timestamp_article = strtotime($item->pubDate);
 			/* Memeriksa Berita */
 			/* Jika ada Berita, Sampaikan.. */
-			if ($timestamp_article > $last_send and $last_send_title != $item->guid) {
-				$message = $item->title $item->enclosure['url'];
-				$reply_markup = json_encode(array(
+			if ($timestamp_article > $last_send and $last_send_title != $item->title) {
+				$message = ucfirst($item->category) . " - " . $item->title . PHP_EOL;
+				$message .= $item->enclosure['url'] . PHP_EOL;
+				$reply_markup = json_encode( array(
 					'inline_keyboard' => array(
 						array(
 							array(
-								'text' => '🌐 Visit Site ',
-								'url'  => urlencode($item->link),
+								'text' => '🔗 Baca Aku',
+								'url'  => urlencode( $item->link ),
 							)
 						)
 					),
-				));
+				) );
 				telegram_send_chat_message($token, $chat, $message, $reply_markup);
 				$last_send = $timestamp_article;
-				$last_send_title = $item->guid;
-				print("[$time] " . $item->title . "\n");
+				$last_send_title = $item->title;
 			}
 		}
 	}
 	sleep($wait);
 }
+?>
