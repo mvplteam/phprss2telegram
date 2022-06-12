@@ -1,1 +1,1 @@
-worker: php index.php
+worker: php cuy.php
