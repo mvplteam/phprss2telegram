@@ -48,7 +48,7 @@ function telegram_send_chat_message($token, $chat, $message, $reply_markup)
 	/* Jika Error */
 	$time = time();
 	/* URL Variabel */
-	$url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat";
+	$url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat&reply_markup=$reply_markup";
 	/* Pesan Terkirim */
 	$send_text = urlencode($message);
 	$url = $url . "&text=$send_text";
@@ -94,8 +94,18 @@ while (true) {
 			/* Memeriksa Berita */
 			/* Jika ada Berita, Sampaikan.. */
 			if ($timestamp_article > $last_send and $last_send_title != $item->guid) {
-				$message = "/qbleech1 " . $item->enclosure['url'] . PHP_EOL;
-				telegram_send_chat_message($token, $chat, $message);
+				$message = "/leech1 " . $item->enclosure['url'] . PHP_EOL;
+				$reply_markup = json_encode(array(
+					'inline_keyboard' => array(
+						array(
+							array(
+								'text' => '🌐 Kunjungi Situs Utama ',
+								'url'  => urlencode($item->link),
+							)
+						)
+					),
+				));
+				telegram_send_chat_message($token, $chat, $message, $reply_markup);
 				$last_send = $timestamp_article;
 				$last_send_title = $item->guid;
 				print("[$time] " . $item->title . "\n");
